@@ -1,0 +1,48 @@
+<html>
+<body>
+<div>
+<p> </p>
+
+<h2><%= link_to  "Create New Customer", new_customer_path %> </h2>
+
+</div>
+
+
+<h1> List all customers </h1>
+
+<table>
+<thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Zip</th>
+        <th>State</th>
+    </thead>
+    <tbody>
+<% @customer.each do |customer| %>
+    <tr>
+
+        <td><%= customer.firstname %></td>
+        <td><%= customer.lastname %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.city %></td>
+        <td><%= customer.zip %></td>
+        <td><%= customer.state %></td>
+<!--         <td> <%= link_to  "Edit Customer", edit_customer_path(customer) %> </td>-->
+         <td>  <b> <%= link_to 'Edit', {:action => 'edit', :id => customer.id} %></b> </td>
+
+<td>
+
+<%= link_to 'Delete', customer, method: :delete %> 
+</td> 
+
+    </tr>
+<% end %>
+    </tbody>
+</table>
+
+</body>
+
+</html>
+

@@ -1,0 +1,26 @@
+
+development:
+ host: localhost
+ username: pguser
+ password: pguser
+ adapter: postgresql
+ database: billiards_development
+ encoding: unicode
+
+test:
+ host: localhost
+ username: pguser
+ password: pguser
+ adapter: postgresql
+ database: billiards_test
+ encoding: unicode
+
+
+production:
+ host: localhost
+ username: pguser
+ password: pguser
+ adapter: postgresql
+ database: billiards_production
+ encoding: unicode
+
